@@ -7,16 +7,17 @@ import logokasa from '../assets/images/logokasa.png';
 
 function Header() {
  return (
-  <header className={styles.header}>
-   <div>
-      <img src={ logokasa } alt="logo Kasa" />
+  <header className={`${styles.header} d-flex flex-row align-items-center`}>
+    <div className="flex-fill">
+      <img src={logokasa} alt="logo Kasa" />
     </div>
-    <ul>
-      <li>Accueil</li>
-      <li>A propos</li>
-    </ul>
-    
-    </header>
+    <div>
+      <ul className="d-flex">
+        <li className="mr-25">Accueil</li>
+        <li>A propos</li>
+      </ul>
+    </div>
+  </header>
  ) 
 }
 
