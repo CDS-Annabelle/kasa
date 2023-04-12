@@ -42,4 +42,6 @@
 .container {
   background-color: var(--gray-2);
   border-radius: 25px;
+  display: flex;
+  justify-content: space-evenly;
 }

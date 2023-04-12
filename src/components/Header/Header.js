@@ -1,5 +1,5 @@
 import styles from "./Header.module.scss";
-import logokasa from '../assets/images/logokasa.png';
+import logokasa from '../../assets/images/logokasa.png';
 
 
 
