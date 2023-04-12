@@ -1,10 +1,6 @@
 import styles from "./Header.module.scss";
 import logokasa from '../../assets/images/logokasa.png';
 
-
-
-
-
 function Header() {
  return (
   <header className={`${styles.header} d-flex flex-row align-items-center`}>
