@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Content.module.scss";
-import Accommodation from '../Accomodation/Accommodation';
+import Card from '../Card/Cards';
 import data from '../../data/accommodations.json';
 
 function Content() {
@@ -16,7 +16,7 @@ function Content() {
         <div className={`card p-20 ${styles.contentCard}`}>
           <div className={styles.grid}>
             {accommodations.map((a) => (
-              <Accommodation key={a.id} title={a.title} cover={a.cover} />
+              <Card key={a.id} title={a.title} cover={a.cover} />
             ))}
           </div>
         </div>

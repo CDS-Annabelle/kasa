@@ -1,6 +1,6 @@
-import styles from './Accommodation.module.scss';
+import styles from './Card.module.scss';
 
-function Accommodation({title, cover}) {
+function Card({title, cover}) {
   return (
       <div className={styles.cardContainer}>
         <img className={styles.imageCard} src={cover} alt={title} />
@@ -9,4 +9,4 @@ function Accommodation({title, cover}) {
   );
 }
 
-export default Accommodation;
+export default Card;

@@ -1,23 +1,12 @@
-@use '../../assets/styles/mixins' as mixin;
+
 
 .header {
   padding: 10px 20px;
   margin-top: 30px;
+  width: 100%;
   img {
     width: 150px;
     cursor: pointer;
-  }
-}
-
-
-.headerList {
-  a {
-    color: red;
-    color: var(--primary);
-    margin-right: 15px;
-  }
-  @include mixin.xs {
-    display: none;
   }
 }
 
