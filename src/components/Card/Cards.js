@@ -1,11 +1,13 @@
 import styles from './Card.module.scss';
+import { Link } from "react-router-dom";
 
-function Card({title, cover}) {
+function Card({ id, title, cover }) {
   return (
-      <div className={styles.cardContainer}>
-        <img className={styles.imageCard} src={cover} alt={title} />
-        <span className={styles.accommodationTitle}>{title}</span>
-      </div>
+    <Link to={`/accommodations/${id}`} className={styles.cardContainer}>
+      <div className={styles.filter}></div>
+      <img className={styles.imageCard} src={cover} alt={title} />
+      <span className={styles.accommodationTitle}>{title}</span>
+    </Link>
   );
 }
 
