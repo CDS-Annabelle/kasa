@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/accommodations/:id" component={Accommodations} />
+        <Route path="/accommodations/:id" element={<Accommodations/>} />
  {/*path="*" fonctionne si jamais l'url ne correspond à rien de déclarer au-dessus*/}
         <Route path="*" element={<Error />} />
       </Routes>

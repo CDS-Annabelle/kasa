@@ -4,7 +4,6 @@ import Card from '../Card/Cards';
 import data from '../../data/accommodations.json';
 import Topbanner from "../Topbanner/Topbanner";
 import image from "../../assets/images/homeban.png";
-import { Link } from "react-router-dom";
 import Accommodation from "../Accommodation/Accommodation";
 
 function Content() {
@@ -21,9 +20,8 @@ function Content() {
         <div className={`card p-20 ${styles.contentCard}`}>
           <div className={styles.grid}>
             {accommodations.map((a) => (
-             <Link key={a.id} to={`/accommodations/${a.id}`}>
-              <Card title={a.title} cover={a.cover} />
-            </Link>
+
+              <Card key={a.id} id={a.id} title={a.title} cover={a.cover} />
             ))}
           </div>
         </div>
