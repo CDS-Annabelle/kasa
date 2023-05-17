@@ -1,10 +1,12 @@
+@use "../../assets/styles/mixins" as mixin;
+
 .headerAccommodation{
     display: flex;
     width: 100%;
 }
 
 .titleAccomodation{
-    height: 20px;
+    height: 40px;
 }
 
 .location

@@ -1,10 +1,11 @@
 import React from "react";
 
 function Accommodation(props) {
-  const {location, tags, name, rating } = props;
+  const { title, cover, location, tags, name, rating } = props;
 
   return (
     <div>
+      <img src={cover} alt={title} />
       <p>{location}</p>
       <p>{tags}</p>
       <p>{name}</p>
