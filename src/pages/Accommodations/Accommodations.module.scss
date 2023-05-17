@@ -1,0 +1,75 @@
+.headerAccommodation{
+    display: flex;
+    width: 100%;
+}
+
+.titleAccomodation{
+    height: 20px;
+}
+
+.location
+{
+    height: 10px;
+}
+
+.headerLeftAccomodation{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.headerRightAccomodation{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: flex-end;
+}
+
+.host{
+    display: flex;
+    height: 110px;
+}
+
+.name{
+    width: 50px;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.hostPicture{
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    margin-left: 10px;
+}
+
+.ratings{
+    height: 40px;
+    text-align: right;
+}
+
+.accomodationContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.descriptionContainer{
+    display: flex;
+    width: 45%;
+}
+
+.equipmentsContainer{
+    width: 45%;
+}
+
+.tag{
+    margin-right: 15px;
+    background: #FF6060;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
