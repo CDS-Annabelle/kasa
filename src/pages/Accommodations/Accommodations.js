@@ -1,6 +1,5 @@
 import React from "react";
 import accommodationsData from "../../data/accommodations.json";
-import Accommodation from "../../components/Accommodation/Accommodation";
 import styles from './Accommodations.module.scss';
 import AccommodationCard from '../../components/AccommodationCard/Accommodationcard'
 import { useParams } from "react-router-dom";
@@ -25,15 +24,15 @@ function Accommodations() {
       <div className={styles.headerAccommodation}>
           <div className={styles.headerLeftAccomodation}>
             <h1 className ={styles.titleAccomodation}>
-              <Accommodation title={property.title}/>
+              {property.title}
             </h1>
             <p className={styles.location}>
-              <Accommodation location = {property.location} />
+              {property.location}
             </p>
             <p className={styles.tags}>
-              <Accommodation tags={property.tags.map((tags, index) => (
+              {property.tags.map((tags, index) => (
                 <button className={styles.tag} key={index}>{tags}</button>
-              ))} />
+              ))}
             </p>
           </div>
         
