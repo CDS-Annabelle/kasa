@@ -1,11 +1,21 @@
+@use "../../assets/styles/mixins" as mixin;
+
+
 .navigation {
   ul {
     display: flex;
     margin: 30px;
+    @include mixin.xs{
+      justify-content: right;
+      margin: 30px 0px;
+    }
 
     a {
       text-decoration: none;
       padding: 10px;
+      @include mixin.xs{
+        font-size: 1rem;
+      }
 
       li {
         color: var(--primary);
@@ -31,6 +41,10 @@ a[aria-current=page] {
     transform: translateX(-50%);
     -webkit-animation: anim 0.3s ease forwards;
     animation: anim 0.6s ease forwards;
+
+    @include mixin.xs{
+      height: 2px;
+    }
 
     @-webkit-keyframes anim {
       to {

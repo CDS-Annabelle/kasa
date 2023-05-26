@@ -1,3 +1,5 @@
+@use "../../assets/styles/mixins" as mixin;
+
 .carrousel {
     margin: auto;
     position: relative;
@@ -9,6 +11,10 @@
     flex-direction: column;
     justify-content: center;
     margin-bottom: 80px;
+    @include mixin.xs{
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
 
 .carrouselpicture {

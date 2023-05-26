@@ -1,9 +1,15 @@
+@use "../../assets/styles/mixins" as mixin;
+
 .banner {
   position: relative;
   margin-bottom: 20px;
   border-radius: 10px;
   overflow: hidden;
   height: 223px;
+  @include mixin.xs{
+    margin: 20px;
+    height: 120px;
+  }
 
   &__img {
     object-fit: cover;
@@ -15,7 +21,6 @@
   &__overlay {
     position: absolute;
     display: flex;
-    justify-content: center;
     align-items: center;
     top: 0;
     left: 0;
@@ -31,5 +36,21 @@
     text-align: center;
     font-weight: bold;
     z-index: 1;
+    width: 100%;
+    @include mixin.xs{
+      font-size: 1.4rem;
+      font-weight: normal;
+      width: 60%;
+      text-align: left;
+      padding-left: 2px;
+    }
   }
 }
+
+.break-after-comma::after {
+  @include mixin.xs{
+      content: "\A";
+      white-space: pre;
+  }
+}
+

@@ -3,6 +3,10 @@
 .headerAccommodation{
     display: flex;
     width: 100%;
+    @include mixin.xs{
+        flex-direction: column;
+        padding: 10px;
+    }
 }
 
 
@@ -16,17 +20,30 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+    @include mixin.xs{
+        width: 100%;
+    }
 }
 .headerRightAccomodation{
     display: flex;
     flex-direction: column;
     width: 50%;
     align-items: flex-end;
+    @include mixin.xs{
+        display: flex;
+        flex-direction: row; 
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 .host{
     display: flex;
     height: 110px;
+    @include mixin.xs{
+        order:2;
+    }
 }
 
 .name{
@@ -51,15 +68,25 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    @include mixin.xs{
+        flex-direction: column;
+        padding: 10px;
+    }
 }
 
 .descriptionContainer{
     display: flex;
     width: 45%;
+    @include mixin.xs{
+        width: 100%;
+    }
 }
 
 .equipmentsContainer{
     width: 45%;
+    @include mixin.xs{
+        width: 100%;
+    }
 }
 
 .tag{
@@ -71,5 +98,9 @@
     color: white;
     font-size: 14px;
     text-align: center;
+}
+
+p.tags{
+    display: flex;
 }
 
