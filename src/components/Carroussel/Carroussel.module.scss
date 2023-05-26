@@ -41,7 +41,7 @@
 
 
 .leftArrow{
-    top: 50%;
+    top: calc(50% - 72px);
     z-index: 1;
     width: 46px;
     height: 72px;
@@ -51,7 +51,7 @@
 }
 
 .rightArrow{
-    top: 50%;
+    top: calc(50% - 72px);
     cursor: pointer;
     z-index: 1;
     width: 46px;
