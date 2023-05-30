@@ -7,11 +7,6 @@ import Topbanner from '../../components/Topbanner/Topbanner'
 const About = () => {
     return (
         <div className={styles.aboutContainer}>
-            {/* <div className={styles.aboutBanner}>
-        <div className={styles.overlay}></div>
-        <img src={aboutban} alt="About banner" className={styles.image} />
-      </div> */}
-
             <div className="home__banner">
                 <Topbanner image={image} alt="bannière à propos de Kasa" />
             </div>

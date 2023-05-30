@@ -1,64 +1,76 @@
-import React from "react";
-import accommodationsData from "../../data/accommodations.json";
-import styles from './Accommodations.module.scss';
+import React from 'react'
+import accommodationsData from '../../data/accommodations.json'
+import styles from './Accommodations.module.scss'
 import AccommodationCard from '../../components/AccommodationCard/Accommodationcard'
-import { useParams } from "react-router-dom";
-import Stars from "../../components/Star/Star";
-import Carroussel from "../../components/Carroussel/Carroussel";
+import { useParams } from 'react-router-dom'
+import Stars from '../../components/Star/Star'
+import Carroussel from '../../components/Carroussel/Carroussel'
 
 function Accommodations() {
-  const { id } = useParams(); // Récupére l'ID du logement depuis les props du composant
-  const property = accommodationsData.find(a => a.id === id);
+    const { id } = useParams() // Récupére l'ID du logement depuis les props du composant
+    const property = accommodationsData.find((a) => a.id === id)
 
+    if (!property) {
+        // Si aucun logement ne correspond à l'ID, affichage d'un message d'erreur
+        return <div>Aucun logement trouvé pour l'ID {id}</div>
+    }
 
-  if (!property) { // Si aucun logement ne correspond à l'ID, afficher un message d'erreur
-    return <div>Aucun logement trouvé pour l'ID {id}</div>;
-  }
-
-  return (
-    <>
-      <div className={styles.coverAccomodation}>
-        <Carroussel pictures = {property.pictures}/>
-      </div>
-
-      <div className={styles.headerAccommodation}>
-          <div className={styles.headerLeftAccomodation}>
-            <h1 className ={styles.titleAccomodation}>
-              {property.title}
-            </h1>
-            <p className={styles.location}>
-              {property.location}
-            </p>
-            <p className={styles.tags}>
-              {property.tags.map((tags, index) => (
-                <button className={styles.tag} key={index}>{tags}</button>
-              ))}
-            </p>
-          </div>
-        
-          <div className={styles.headerRightAccomodation}>
-            <div className={styles.host}>
-                <p className={styles.name}>{property.host.name}</p>
-                <img src={property.host.picture} alt="Proprietaire" className={styles.hostPicture} />
+    return (
+        <>
+            <div className={styles.coverAccomodation}>
+                <Carroussel pictures={property.pictures} />
             </div>
-            <div className={styles.ratings}>
-                <Stars rating={property.rating}/>
-            </div>
-          </div>
-      </div>
 
-      <div className={styles.accomodationContainer}>
-        <div className={styles.descriptionContainer}>
-          <AccommodationCard title="Description" textDescription={property.description} />
-        </div>
-        <div className={styles.equipmentsContainer}>
-          <AccommodationCard title="Equipements" textEquipments={property.equipments.map((equipments, index) => (
-            <li key={index}>{equipments}</li>
-        ))} />
-        </div>
-      </div>
-    </>
-  );
+            <div className={styles.headerAccommodation}>
+                <div className={styles.headerLeftAccomodation}>
+                    <h1 className={styles.titleAccomodation}>
+                        {property.title}
+                    </h1>
+                    <p className={styles.location}>{property.location}</p>
+                    <p className={styles.tags}>
+                        {property.tags.map((tags, index) => (
+                            <button className={styles.tag} key={index}>
+                                {tags}
+                            </button>
+                        ))}
+                    </p>
+                </div>
+
+                <div className={styles.headerRightAccomodation}>
+                    <div className={styles.host}>
+                        <p className={styles.name}>{property.host.name}</p>
+                        <img
+                            src={property.host.picture}
+                            alt="Proprietaire"
+                            className={styles.hostPicture}
+                        />
+                    </div>
+                    <div className={styles.ratings}>
+                        <Stars rating={property.rating} />
+                    </div>
+                </div>
+            </div>
+
+            <div className={styles.accomodationContainer}>
+                <div className={styles.descriptionContainer}>
+                    <AccommodationCard
+                        title="Description"
+                        textDescription={property.description}
+                    />
+                </div>
+                <div className={styles.equipmentsContainer}>
+                    <AccommodationCard
+                        title="Equipements"
+                        textEquipments={property.equipments.map(
+                            (equipments, index) => (
+                                <li key={index}>{equipments}</li>
+                            )
+                        )}
+                    />
+                </div>
+            </div>
+        </>
+    )
 }
 
-export default Accommodations;
+export default Accommodations
