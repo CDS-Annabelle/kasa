@@ -1,24 +1,21 @@
-
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #FF6060;
+    background: #ff6060;
     padding: 10px;
     color: #fff;
     cursor: pointer;
-  }
-  
-  .icon {
+}
+
+.icon {
     margin-left: auto;
-  }
-  
-  
-  .content {
+}
+
+.content {
     font-size: 16px;
     background: #f7f7f7;
     padding: 20px;
     margin-bottom: 25px;
-    min-height: 150px;
-  }
-  
+    min-height: 200px;
+}

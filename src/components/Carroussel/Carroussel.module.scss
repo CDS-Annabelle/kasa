@@ -1,4 +1,4 @@
-@use "../../assets/styles/mixins" as mixin;
+@use '../../assets/styles/mixins' as mixin;
 
 .carrousel {
     margin: auto;
@@ -11,9 +11,12 @@
     flex-direction: column;
     justify-content: center;
     margin-bottom: 80px;
-    @include mixin.xs{
+    @include mixin.xs {
         width: 100%;
         margin-bottom: 30px;
+        @include mixin.xs {
+            height: 280px;
+        }
     }
 }
 
@@ -25,42 +28,50 @@
     max-width: 1140px;
     border-radius: 25px;
     margin-left: 10px;
+    @include mixin.xs {
+        height: 280px;
+        margin-left: 0px;
+    }
 }
 
 .carrouselpictureactive {
-    transform: scale(1);
     width: 100%;
-    transition: transform 300ms;
 }
 
 .carrouselpictureinactive {
-    transform: scale(1.05);
-    transition: transform 300ms;
     width: 100%;
 }
 
-
-.leftArrow{
-    top: calc(50% - 72px);
+.leftArrow {
+    top: calc(50% - 52px);
     z-index: 1;
     width: 46px;
     height: 72px;
     position: absolute;
     cursor: pointer;
     margin-left: 40px;
+    @include mixin.xs {
+        top: calc(50% - 32px);
+        width: auto;
+        height: 42px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
-.rightArrow{
-    top: calc(50% - 72px);
+.rightArrow {
+    top: calc(50% - 52px);
     cursor: pointer;
     z-index: 1;
     width: 46px;
     height: 72px;
     position: absolute;
     right: 0;
-}
-
-
-.number{
-   
+    @include mixin.xs {
+        top: calc(50% - 32px);
+        width: auto;
+        height: 42px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }

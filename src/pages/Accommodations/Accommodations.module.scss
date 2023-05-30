@@ -1,106 +1,106 @@
-@use "../../assets/styles/mixins" as mixin;
+@use '../../assets/styles/mixins' as mixin;
 
-.headerAccommodation{
+.headerAccommodation {
     display: flex;
     width: 100%;
-    @include mixin.xs{
+    @include mixin.xs {
         flex-direction: column;
-        padding: 10px;
+        padding: 20px;
     }
 }
 
-
-
-.location
-{
+.location {
     height: 10px;
 }
 
-.headerLeftAccomodation{
+.headerLeftAccomodation {
     display: flex;
     flex-direction: column;
     width: 50%;
-    @include mixin.xs{
+    @include mixin.xs {
         width: 100%;
     }
 }
-.headerRightAccomodation{
+.headerRightAccomodation {
     display: flex;
     flex-direction: column;
     width: 50%;
     align-items: flex-end;
-    @include mixin.xs{
+    @include mixin.xs {
         display: flex;
-        flex-direction: row; 
+        flex-direction: row;
         width: 100%;
         align-items: center;
         justify-content: space-between;
     }
 }
 
-.host{
+.host {
     display: flex;
     height: 110px;
-    @include mixin.xs{
-        order:2;
+    @include mixin.xs {
+        order: 2;
+        align-items: center;
     }
 }
 
-.name{
+.name {
     width: 50px;
     margin-right: 10px;
     text-align: right;
 }
 
-.hostPicture{
+.hostPicture {
     border-radius: 50%;
     width: 64px;
     height: 64px;
     margin-left: 10px;
 }
 
-.ratings{
+.ratings {
     height: 40px;
     text-align: right;
 }
 
-.accomodationContainer{
+.accomodationContainer {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    @include mixin.xs{
+    margin-bottom: 40px;
+    @include mixin.xs {
         flex-direction: column;
-        padding: 10px;
+        padding: 20px;
     }
 }
 
-.descriptionContainer{
-    display: flex;
+.descriptionContainer {
     width: 45%;
-    @include mixin.xs{
+    @include mixin.xs {
         width: 100%;
     }
 }
 
-.equipmentsContainer{
+.equipmentsContainer {
     width: 45%;
-    @include mixin.xs{
+    @include mixin.xs {
         width: 100%;
     }
 }
 
-.tag{
+.tag {
     margin-right: 15px;
-    background: #FF6060;
+    background: #ff6060;
     border-radius: 10px;
     border: none;
     padding: 10px 20px 10px 20px;
     color: white;
     font-size: 14px;
     text-align: center;
+    @include mixin.xs {
+        padding: 5px 10px;
+    }
 }
 
-p.tags{
+p.tags {
     display: flex;
 }
-
