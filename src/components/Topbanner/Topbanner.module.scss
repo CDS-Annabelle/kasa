@@ -7,8 +7,8 @@
     overflow: hidden;
     height: 223px;
     @include mixin.xs {
-        margin: 10px;
-        height: 180px;
+        margin: 20px;
+        height: 150px;
     }
 
     &__img {
