@@ -1,7 +1,6 @@
 import data from '../../data/accommodations.json'
 import Topbanner from '../../components/Topbanner/Topbanner'
 import image from '../../assets/images/homeban.png'
-import Accommodation from '../../components/Accommodation/Accommodation'
 import styles from './Homepage.module.scss'
 import Card from '../../components/Card/Cards'
 
@@ -32,8 +31,6 @@ export default function Homepage() {
                     </div>
                 </div>
             </div>
-
-            <Accommodation />
         </>
     )
 }

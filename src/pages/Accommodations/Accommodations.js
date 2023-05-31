@@ -1,7 +1,7 @@
 import React from 'react'
 import accommodationsData from '../../data/accommodations.json'
 import styles from './Accommodations.module.scss'
-import AccommodationCard from '../../components/AccommodationCard/Accommodationcard'
+import Collapse from '../../components/Collapse/Collapse'
 import { useParams } from 'react-router-dom'
 import Stars from '../../components/Star/Star'
 import Carroussel from '../../components/Carroussel/Carroussel'
@@ -53,19 +53,23 @@ function Accommodations() {
 
             <div className={styles.accomodationContainer}>
                 <div className={styles.descriptionContainer}>
-                    <AccommodationCard
-                        title="Description"
+                    <Collapse
+                        titleAccommodation="Description"
                         textDescription={property.description}
+                        isDefaultOpen={true}
+                        pageStyle="accomodation"
                     />
                 </div>
                 <div className={styles.equipmentsContainer}>
-                    <AccommodationCard
-                        title="Equipements"
+                    <Collapse
+                        titleAccommodation="Equipements"
                         textEquipments={property.equipments.map(
                             (equipments, index) => (
                                 <li key={index}>{equipments}</li>
                             )
                         )}
+                        isDefaultOpen={true}
+                        pageStyle="accomodation"
                     />
                 </div>
             </div>

@@ -7,6 +7,9 @@
         flex-direction: column;
         padding: 20px;
     }
+    @include mixin.md {
+        padding: 40px;
+    }
 }
 
 .location {
@@ -69,19 +72,20 @@
     margin-bottom: 40px;
     @include mixin.xs {
         flex-direction: column;
-        padding: 20px;
     }
 }
 
 .descriptionContainer {
-    width: 45%;
+    width: 100%;
+    margin-right: 45px;
     @include mixin.xs {
         width: 100%;
+        margin-bottom: 25px;
     }
 }
 
 .equipmentsContainer {
-    width: 45%;
+    width: 100%;
     @include mixin.xs {
         width: 100%;
     }
@@ -98,9 +102,13 @@
     text-align: center;
     @include mixin.xs {
         padding: 5px 10px;
+        margin-bottom: 15px;
     }
 }
 
 p.tags {
     display: flex;
+    @include mixin.xs {
+        flex-wrap: wrap;
+    }
 }
