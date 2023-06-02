@@ -5,6 +5,7 @@ import Collapse from '../../components/Collapse/Collapse'
 import { useParams } from 'react-router-dom'
 import Stars from '../../components/Star/Star'
 import Carroussel from '../../components/Carroussel/Carroussel'
+import Error from '../../pages/Error/Error'
 
 function Accommodations() {
     const { id } = useParams() // Récupére l'ID du logement depuis les props du composant
@@ -12,7 +13,7 @@ function Accommodations() {
 
     if (!property) {
         // Si aucun logement ne correspond à l'ID, affichage d'un message d'erreur
-        return <div>Aucun logement trouvé pour l'ID {id}</div>
+        return <Error />
     }
 
     return (
