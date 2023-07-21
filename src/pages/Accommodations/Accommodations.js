@@ -8,11 +8,10 @@ import Carroussel from '../../components/Carroussel/Carroussel'
 import Error from '../../pages/Error/Error'
 
 function Accommodations() {
-    const { id } = useParams() // Récupére l'ID du logement depuis les props du composant
+    const { id } = useParams()
     const property = accommodationsData.find((a) => a.id === id)
 
     if (!property) {
-        // Si aucun logement ne correspond à l'ID, affichage d'un message d'erreur
         return <Error />
     }
 
